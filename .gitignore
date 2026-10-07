@@ -1,0 +1,13 @@
+node_modules/
+.env
+.env.*
+*.env
+*.secret
+secrets/
+credentials/
+dist/
+build/
+*.pem
+*.key
+*.p12
+*.pfx

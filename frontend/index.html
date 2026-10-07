@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fffdf8">
+    <meta name="description" content="ReachOut — a good place to start a conversation.">
+    <title>ReachOut — Start a conversation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="site-shell" id="home">
+        <header class="site-header">
+            <a class="brand" href="#contact" aria-label="ReachOut">
+                <span class="brand-mark" aria-hidden="true">
+                    <svg viewBox="0 0 36 36" fill="none">
+                        <path d="M7 9.5A3.5 3.5 0 0 1 10.5 6h12A3.5 3.5 0 0 1 26 9.5v8a3.5 3.5 0 0 1-3.5 3.5H16l-5.5 4v-4.2A3.5 3.5 0 0 1 7 17.5v-8Z" />
+                        <path d="M17 25.5a3.5 3.5 0 0 0 3.5 3.5h4l4.5 3v-4a3.5 3.5 0 0 0 3-3.5v-4a3.5 3.5 0 0 0-3.5-3.5H26" />
+                    </svg>
+                </span>
+                <span>ReachOut</span>
+            </a>
+
+            <nav class="site-nav" aria-label="Main navigation">
+                <a class="nav-contact" href="#contact">Contact <span aria-hidden="true">↗</span></a>
+            </nav>
+        </header>
+
+        <main class="main-layout">
+            <section class="visual-section" id="about" aria-labelledby="pageTitle">
+                <p class="eyebrow"><span aria-hidden="true"></span> LET’S CONNECT</p>
+                <h1 id="pageTitle">Start a <span>conversation.</span></h1>
+                <p class="intro-copy">Have something to ask, share or discuss? We’d love to hear from you.</p>
+
+                <div class="conversation-art" role="img" aria-label="A group of connected message bubbles">
+                    <svg class="art-lines" viewBox="0 0 560 410" fill="none" aria-hidden="true">
+                        <path class="connection-line connection-line--one" d="M161 105C226 78 285 104 315 155" />
+                        <path class="connection-line connection-line--two" d="M385 116C445 142 461 199 415 229" />
+                        <path class="connection-line connection-line--three" d="M171 286C225 327 301 316 338 268" />
+                        <circle cx="159" cy="105" r="4" />
+                        <circle cx="385" cy="116" r="4" />
+                        <circle cx="171" cy="286" r="4" />
+                    </svg>
+
+                    <div class="art-orbit art-orbit--one" aria-hidden="true"></div>
+                    <div class="art-orbit art-orbit--two" aria-hidden="true"></div>
+
+                    <div class="message-bubble bubble--top" aria-hidden="true">
+                        <span class="bubble-avatar avatar--peach">M</span>
+                        <span class="bubble-lines"><i></i><i></i></span>
+                        <span class="bubble-dot"></span>
+                    </div>
+
+                    <div class="message-bubble bubble--right" aria-hidden="true">
+                        <span class="bubble-avatar avatar--gold">J</span>
+                        <span class="bubble-lines"><i></i><i></i></span>
+                        <span class="bubble-check">✓</span>
+                    </div>
+
+                    <div class="message-bubble bubble--bottom" aria-hidden="true">
+                        <span class="bubble-avatar avatar--coral">A</span>
+                        <span class="bubble-lines"><i></i><i></i></span>
+                        <span class="bubble-dot bubble-dot--green"></span>
+                    </div>
+
+                    <div class="main-message" aria-hidden="true">
+                        <span class="main-message-kicker"><i></i> A NEW CONVERSATION</span>
+                        <span class="main-message-copy">Every good thing<br>starts with a hello.</span>
+                        <span class="main-message-bottom">
+                            <span class="avatar-stack"><i>M</i><i>J</i><i>A</i></span>
+                            <span class="message-send">
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path d="m4 11 16-7-6.5 16-2.7-6.8L4 11Z" />
+                                    <path d="m10.8 13.2 5-5" />
+                                </svg>
+                            </span>
+                        </span>
+                    </div>
+
+                    <span class="art-spark art-spark--one" aria-hidden="true">✳</span>
+                    <span class="art-spark art-spark--two" aria-hidden="true">✦</span>
+                    <span class="art-notification" aria-hidden="true">1</span>
+                </div>
+            </section>
+
+            <section class="form-section" id="contact" aria-labelledby="formTitle">
+                <div class="form-heading">
+                    <div>
+                        <p class="form-kicker">YOUR MESSAGE</p>
+                        <h2 id="formTitle">What’s on your mind?</h2>
+                    </div>
+                    <span class="heading-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M4 5.75A2.75 2.75 0 0 1 6.75 3h10.5A2.75 2.75 0 0 1 20 5.75v7.5A2.75 2.75 0 0 1 17.25 16H11l-4.5 4v-4.2A2.75 2.75 0 0 1 4 13.25v-7.5Z" />
+                            <path d="M8 8h8M8 11.5h5" />
+                        </svg>
+                    </span>
+                </div>
+
+                <div class="readiness" id="readiness" data-state="waiting" aria-live="polite">
+                    <span class="readiness-dot" aria-hidden="true"></span>
+                    <span class="readiness-title">Message readiness</span>
+                    <span class="readiness-divider" aria-hidden="true"></span>
+                    <span id="readinessLabel">Waiting for your details</span>
+                </div>
+
+                <form id="contactForm" novalidate>
+                    <div class="field-group">
+                        <label for="name">Full name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            autocomplete="name"
+                            placeholder="Enter your full name"
+                            minlength="2"
+                            maxlength="60"
+                            aria-describedby="nameFeedback"
+                            aria-invalid="false"
+                            required
+                        >
+                        <span class="field-feedback" id="nameFeedback" aria-live="polite"></span>
+                    </div>
+
+                    <div class="field-group">
+                        <label for="email">Email address</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            autocomplete="email"
+                            placeholder="you12@gmail.com"
+                            maxlength="254"
+                            aria-describedby="emailFeedback"
+                            aria-invalid="false"
+                            required
+                        >
+                        <span class="field-feedback" id="emailFeedback" aria-live="polite"></span>
+                    </div>
+
+                    <div class="field-group field-group--message">
+                        <div class="message-label">
+                            <label for="message">Message</label>
+                            <span id="counter" aria-live="off">0 / 500</span>
+                        </div>
+                        <textarea
+                            id="message"
+                            name="message"
+                            maxlength="500"
+                            placeholder="Tell us what you’d like to discuss..."
+                            aria-describedby="messageFeedback counter"
+                            aria-invalid="false"
+                            required
+                        ></textarea>
+                        <span class="field-feedback" id="messageFeedback" aria-live="polite"></span>
+                    </div>
+
+                    <button type="submit" id="submitButton">
+                        <span id="buttonText">Reach Out</span>
+                        <span class="button-arrow" aria-hidden="true">→</span>
+                    </button>
+
+                    <div class="response-message" id="responseMessage" role="status" aria-live="polite"></div>
+                </form>
+
+                <p class="privacy-note"><span aria-hidden="true">✦</span> Your note goes to a real person, not a black hole.</p>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <span>© 2026 ReachOut</span>
+            <span>Start a conversation.</span>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
